@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sura Aliyeva — Data & Reporting Specialist and Junior Data Analyst portfolio.">
   <title>Sura Aliyeva | Data & Reporting Specialist</title>
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="canonical" href="https://sura-aliyeva.github.io/">
+  <meta name="theme-color" content="#08090b">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sura-aliyeva.github.io/">
+  <meta property="og:site_name" content="Sura Aliyeva">
+  <meta property="og:title" content="Sura Aliyeva — Data &amp; Reporting Specialist">
+  <meta property="og:description" content="Portfolio of a Data &amp; Reporting Specialist — an eight-page Power BI e-commerce analytics report and an interactive Porsche data story built entirely from officially published figures.">
+  <meta property="og:image" content="https://sura-aliyeva.github.io/assets/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Executive Summary page of the Maven Fuzzy Factory Power BI report.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sura Aliyeva — Data &amp; Reporting Specialist">
+  <meta name="twitter:description" content="Portfolio of a Data &amp; Reporting Specialist — an eight-page Power BI e-commerce analytics report and an interactive Porsche data story built entirely from officially published figures.">
+  <meta name="twitter:image" content="https://sura-aliyeva.github.io/assets/og-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,10 +32,10 @@
     <a class="brand" href="#home">SA<span>.</span></a>
     <button class="menu" aria-label="Open menu">☰</button>
     <nav>
+      <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -49,72 +66,17 @@
       </div>
     </section>
 
-    <section id="about" class="section split">
-      <div>
-        <p class="eyebrow">01 / ABOUT</p>
-        <h2>Data with a<br><span>business purpose.</span></h2>
-      </div>
-      <div class="text-block">
-        <p>I'm a Data & Reporting Specialist with hands-on experience in reporting, data quality monitoring, and operational analytics in the telecom sector.</p>
-        <p>My work combines Python, SQL, Excel, and Power BI to prepare management reports, identify discrepancies, validate data, and turn operational questions into measurable insights.</p>
-        <p>I'm currently growing toward a Data Analyst role, with a particular interest in process optimization and automation.</p>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <p class="eyebrow">02 / EXPERIENCE</p>
-      <div class="timeline">
-        <article class="timeline-item">
-          <div class="date">JUL 2025 — PRESENT</div>
-          <div>
-            <h3>Data & Reporting Specialist</h3>
-            <p class="company">Bakcell · Dealer Service · Baku</p>
-            <ul>
-              <li>Prepare daily, weekly, and monthly Excel reports on operational performance for management.</li>
-              <li>Monitor performance results, identify discrepancies, and coordinate timely resolution.</li>
-              <li>Coordinate the daily workflow of a 10–15 person team and support operators with system and subscriber issues.</li>
-              <li>Review and validate documents and numbering data entered into the system.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="date">4 MONTHS</div>
-          <div>
-            <h3>Drone Engineer / Instructor</h3>
-            <p class="company">Azerobot</p>
-            <ul>
-              <li>Delivered hands-on training in drone technologies and practical applications.</li>
-              <li>Explained technical concepts and supported learners with practical problem-solving.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <p class="eyebrow">03 / TOOLKIT</p>
-      <h2>Tools I use to<br><span>solve problems.</span></h2>
-      <div class="skills-grid">
-        <div class="skill-card"><b>Python</b><span>Pandas · NumPy</span></div>
-        <div class="skill-card"><b>SQL</b><span>PostgreSQL · MySQL</span></div>
-        <div class="skill-card"><b>Power BI</b><span>DAX · Dashboards</span></div>
-        <div class="skill-card"><b>Excel</b><span>Pivot Tables · XLOOKUP · SUMIFS</span></div>
-        <div class="skill-card"><b>Data Practices</b><span>Cleaning · Validation · QA</span></div>
-        <div class="skill-card"><b>Other</b><span>R · MS Office · AutoCAD · SOLIDWORKS</span></div>
-      </div>
-    </section>
-
     <section id="projects" class="section projects">
       <div class="section-head">
         <div>
-          <p class="eyebrow">04 / SELECTED WORK</p>
+          <p class="eyebrow">01 / SELECTED WORK</p>
           <h2>Projects that show<br><span>how I think with data.</span></h2>
         </div>
       </div>
 
       <article id="maven" class="project featured-project">
         <figure class="shot shot-hero">
-          <button type="button" class="shot-open" data-src="assets/maven/page-01.png" data-cap="01 — Executive Summary">
+          <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-01.png" data-cap="01 — Executive Summary">
             <img src="assets/maven/page-01.png" width="2665" height="1498" loading="lazy"
                  alt="Executive Summary page of the Power BI report: KPI cards for net revenue, gross profit, contribution margin, session conversion rate, average order value and refund rate, above a monthly revenue and gross profit trend, a growth decomposition chart, and net profit by channel and revenue by product.">
           </button>
@@ -134,60 +96,137 @@
         <p class="strip-label">All eight report pages — click any page to view it full size</p>
         <div class="shot-grid">
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-01.png" data-cap="01 — Executive Summary">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-01.png" data-cap="01 — Executive Summary">
               <img src="assets/maven/thumb-01.webp" width="600" height="337" loading="lazy"
                    alt="Executive Summary page: KPI cards for net revenue, gross profit, contribution margin, session conversion rate, average order value and refund rate, above a monthly revenue and gross profit trend, a growth decomposition chart, and net profit by channel and revenue by product.">
             </button>
             <figcaption><span>01</span> Executive Summary</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-02.png" data-cap="02 — Financial Performance">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-02.png" data-cap="02 — Financial Performance">
               <img src="assets/maven/thumb-02.webp" width="600" height="337" loading="lazy"
                    alt="Financial Performance page: gross revenue, cost of goods sold, gross profit and margin, a revenue-to-net-profit waterfall, a monthly profit and loss table, seasonality by month and year, and gross margin by product.">
             </button>
             <figcaption><span>02</span> Financial Performance</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-03.png" data-cap="03 — Channel Efficiency &amp; Bid Economics">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-03.png" data-cap="03 — Channel Efficiency &amp; Bid Economics">
               <img src="assets/maven/thumb-03.webp" width="600" height="337" loading="lazy"
                    alt="Channel Efficiency and Bid Economics page: a what-if cost-per-click model, paid segment economics ranked by breakeven CPC, profit per session by channel and device, and profit after modelled ad spend.">
             </button>
             <figcaption><span>03</span> Channel &amp; Bid Economics</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-04.png" data-cap="04 — Funnel &amp; Conversion">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-04.png" data-cap="04 — Funnel &amp; Conversion">
               <img src="assets/maven/thumb-04.webp" width="600" height="337" loading="lazy"
                    alt="Funnel and Conversion page: a seven-step conversion funnel from landing page to order placed, step economics with drop-off and revenue at risk, a desktop versus mobile comparison, and bounce rate by channel and device.">
             </button>
             <figcaption><span>04</span> Funnel &amp; Conversion</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-05.png" data-cap="05 — Experiment Lab">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-05.png" data-cap="05 — Experiment Lab">
               <img src="assets/maven/thumb-05.webp" width="600" height="337" loading="lazy"
                    alt="Experiment Lab page: A/B test scorecard with control and variant conversion rates, absolute and relative lift, p-values, and a note on which landing-page tests survive proper time-windowing.">
             </button>
             <figcaption><span>05</span> Experiment Lab</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-06.png" data-cap="06 — Product &amp; Cross-Sell">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-06.png" data-cap="06 — Product &amp; Cross-Sell">
               <img src="assets/maven/thumb-06.webp" width="600" height="337" loading="lazy"
                    alt="Product and Cross-Sell page: units, revenue, gross margin, cross-sell rate and basket value, revenue and margin by product, a primary-to-attached cross-sell matrix, and product mix over time.">
             </button>
             <figcaption><span>06</span> Product &amp; Cross-Sell</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-07.png" data-cap="07 — Quality &amp; Refund Risk">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-07.png" data-cap="07 — Quality &amp; Refund Risk">
               <img src="assets/maven/thumb-07.webp" width="600" height="337" loading="lazy"
                    alt="Quality and Refund Risk page: refund rate on an order-cohort basis, a refund-rate control chart with baseline and upper control limit, flagged cohorts, a product-by-month heatmap, and a written account of the August to September 2014 quality incident.">
             </button>
             <figcaption><span>07</span> Quality &amp; Refund Risk</figcaption>
           </figure>
           <figure class="shot">
-            <button type="button" class="shot-open" data-src="assets/maven/page-08.png" data-cap="08 — Methodology &amp; Data Quality">
+            <button type="button" class="shot-open" data-gallery="maven" data-src="assets/maven/page-08.png" data-cap="08 — Methodology &amp; Data Quality">
               <img src="assets/maven/thumb-08.webp" width="600" height="337" loading="lazy"
                    alt="Methodology and Data Quality page: the source inventory of six tables and 1.7 million rows, integrity checks that pass cleanly, thirteen documented data findings with how each is handled, and a list of questions this dataset cannot answer.">
             </button>
             <figcaption><span>08</span> Methodology &amp; Data Quality</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article id="porsche" class="project featured-project">
+        <figure class="shot shot-hero">
+          <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/01-hero.png" data-cap="01 — The opening">
+            <img src="assets/porsche/01-hero.png" width="1400" height="933" loading="lazy"
+                 alt="Opening screen of the Porsche data story: the headline The Art of Performance beside an outlined 911 silhouette and a red arc gauge, with 279,449 vehicles delivered in 2025 set in large figures.">
+          </button>
+          <figcaption><span>01</span> The opening</figcaption>
+        </figure>
+        <div class="project-copy">
+          <p class="project-tag">FEATURED · DATA STORYTELLING</p>
+          <h3>Porsche — The Art of Performance</h3>
+          <p>An interactive data story on Porsche AG across fiscal years 2021–2025 — the combustion-engine icons, the shift to electric, the China question, and where the profit actually comes from.</p>
+          <div class="stats"><span><b>13</b> official sources</span><span><b>44</b> validation checks</span><span><b>16</b> visualizations</span></div>
+          <div class="chips"><span>Python</span><span>SQLite</span><span>JavaScript</span><span>SVG</span><span>Data Quality</span></div>
+          <div class="project-links">
+            <a href="https://sura-aliyeva.github.io/porsche-data-story/" target="_blank" rel="noopener">Live demo ↗</a>
+            <a href="https://github.com/sura-aliyeva/porsche-data-story" target="_blank" rel="noopener">GitHub repo ↗</a>
+          </div>
+          <p class="note">Built only from officially published Porsche figures. Every row carries the document it came from, and a 44-assertion reconciliation gate has to pass before the build writes anything.</p>
+        </div>
+      </article>
+
+      <div class="shot-strip">
+        <p class="strip-label">All seven views — click any view to see it full size</p>
+        <div class="shot-grid">
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/01-hero.png" data-cap="01 — The opening">
+              <img src="assets/porsche/thumb-01.webp" width="600" height="337" loading="lazy"
+                   alt="Opening screen of the Porsche data story: the headline The Art of Performance beside an outlined 911 silhouette and a red arc gauge, with 279,449 vehicles delivered in 2025 set in large figures.">
+            </button>
+            <figcaption><span>01</span> The opening</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/02-the-911.png" data-cap="02 — The 911 effect">
+              <img src="assets/porsche/thumb-02.webp" width="600" height="337" loading="lazy"
+                   alt="The 911 chapter: a large numeral nine over an outlined fastback profile, a 51,583 delivery record card quoting the Porsche press release, and a red five-year delivery trend line rising from 2021 to 2025.">
+            </button>
+            <figcaption><span>02</span> The 911 effect</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/03-signature-radial.png" data-cap="03 — Six model lines, one instrument">
+              <img src="assets/porsche/thumb-03.webp" width="600" height="337" loading="lazy"
+                   alt="The signature radial instrument: six spokes on a circular dial, one per Porsche model line, labelled Macan 84,328, Cayenne 80,886, 911 51,583, Panamera 27,701, 718 18,612 and Taycan 16,339, with a year scrubber below.">
+            </button>
+            <figcaption><span>03</span> Six model lines, one instrument</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/04-electric-scrollytelling.png" data-cap="04 — The electric shift">
+              <img src="assets/porsche/thumb-04.webp" width="600" height="337" loading="lazy"
+                   alt="A step in the pinned electrification sequence: Taycan deliveries as a curve against published electric Macan bars reaching 45,367 in 2025, with the electrified share as a dashed reference and a step caption on the right.">
+            </button>
+            <figcaption><span>04</span> The electric shift</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/05-world-map.png" data-cap="05 — Regional power">
+              <img src="assets/porsche/thumb-05.webp" width="600" height="337" loading="lazy"
+                   alt="Regional deliveries on a world map for 2025, circle area proportional to volume: North America 86,229, Europe excluding Germany 66,340, Overseas 54,974, China 41,938 highlighted in red, and Germany 29,968, with year and region filters above.">
+            </button>
+            <figcaption><span>05</span> Regional power</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/06-key-findings.png" data-cap="06 — Where the decline came from">
+              <img src="assets/porsche/thumb-06.webp" width="600" height="337" loading="lazy"
+                   alt="A decline decomposition: 66 per cent of the volume lost across four shrinking model lines, with the Cayenne bar at minus 22,003 dominating 718, Taycan and Panamera, while the 911 and Macan grew.">
+            </button>
+            <figcaption><span>06</span> Where the decline came from</figcaption>
+          </figure>
+          <figure class="shot">
+            <button type="button" class="shot-open" data-gallery="porsche" data-src="assets/porsche/07-data-transparency.png" data-cap="07 — Data transparency">
+              <img src="assets/porsche/thumb-07.webp" width="600" height="337" loading="lazy"
+                   alt="The data transparency chapter headed Every number, traceable, with a counter row reading 13 official Porsche sources, 5 fiscal years, 8 CSV datasets, 1 SQLite database, 44 of 44 reconciliation checks passing and 0 estimated values.">
+            </button>
+            <figcaption><span>07</span> Data transparency</figcaption>
           </figure>
         </div>
       </div>
@@ -214,6 +253,73 @@
           <p>Cleaned sales data, built KPIs and DAX measures, and delivered an interactive sales performance dashboard.</p>
           <div class="chips"><span>Power BI</span><span>DAX</span><span>Excel</span></div>
         </article>
+      </div>
+    </section>
+
+    <section id="about" class="section split">
+      <div>
+        <p class="eyebrow">02 / ABOUT</p>
+        <h2>Data with a<br><span>business purpose.</span></h2>
+      </div>
+      <div class="text-block">
+        <p>I'm a Data & Reporting Specialist with hands-on experience in reporting, data quality monitoring, and operational analytics in the telecom sector.</p>
+        <p>My work combines Python, SQL, Excel, and Power BI to prepare management reports, identify discrepancies, validate data, and turn operational questions into measurable insights.</p>
+        <p>I'm currently growing toward a Data Analyst role, with a particular interest in process optimization and automation.</p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <p class="eyebrow">03 / EXPERIENCE</p>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="date">JUL 2025 — PRESENT</div>
+          <div>
+            <h3>Data & Reporting Specialist</h3>
+            <p class="company">Bakcell · Dealer Service · Baku</p>
+            <ul>
+              <li>Prepare daily, weekly, and monthly Excel reports on operational performance for management.</li>
+              <li>Monitor performance results, identify discrepancies, and coordinate timely resolution.</li>
+              <li>Coordinate the daily workflow of a 10–15 person team and support operators with system and subscriber issues.</li>
+              <li>Review and validate documents and numbering data entered into the system.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="date">NOV 2024 — APR 2025</div>
+          <div>
+            <h3>Junior Data Scientist</h3>
+            <p class="company">Ministry of Economy · 4SIM Project</p>
+            <ul>
+              <li>Performed data cleaning and preprocessing of large datasets.</li>
+              <li>Designed dashboards using Power BI.</li>
+              <li>Conducted trend analysis and generated insights for decision-making.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="date">4 MONTHS</div>
+          <div>
+            <h3>Drone Engineer / Instructor</h3>
+            <p class="company">Azerobot</p>
+            <ul>
+              <li>Delivered hands-on training in drone technologies and practical applications.</li>
+              <li>Explained technical concepts and supported learners with practical problem-solving.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="eyebrow">04 / TOOLKIT</p>
+      <h2>Tools I use to<br><span>solve problems.</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card"><b>Python</b><span>Pandas · NumPy</span></div>
+        <div class="skill-card"><b>SQL</b><span>PostgreSQL · MySQL</span></div>
+        <div class="skill-card"><b>Power BI</b><span>DAX · Dashboards</span></div>
+        <div class="skill-card"><b>Excel</b><span>Pivot Tables · XLOOKUP · SUMIFS</span></div>
+        <div class="skill-card"><b>Data Practices</b><span>Cleaning · Validation · QA</span></div>
+        <div class="skill-card"><b>Other</b><span>R · MS Office · AutoCAD · SOLIDWORKS</span></div>
       </div>
     </section>
 
