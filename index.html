@@ -13,14 +13,14 @@
   <meta property="og:url" content="https://sura-aliyeva.github.io/">
   <meta property="og:site_name" content="Sura Aliyeva">
   <meta property="og:title" content="Sura Aliyeva — Data &amp; Reporting Specialist">
-  <meta property="og:description" content="Portfolio of a Data &amp; Reporting Specialist — an eight-page Power BI e-commerce analytics report and an interactive Porsche data story built entirely from officially published figures.">
+  <meta property="og:description" content="Explore Methane Intelligence, the eight-page Maven Fuzzy Factory Power BI report, and an interactive Porsche data story built from officially published figures.">
   <meta property="og:image" content="https://sura-aliyeva.github.io/assets/og-cover.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Executive Summary page of the Maven Fuzzy Factory Power BI report.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sura Aliyeva — Data &amp; Reporting Specialist">
-  <meta name="twitter:description" content="Portfolio of a Data &amp; Reporting Specialist — an eight-page Power BI e-commerce analytics report and an interactive Porsche data story built entirely from officially published figures.">
+  <meta name="twitter:description" content="Explore Methane Intelligence, the eight-page Maven Fuzzy Factory Power BI report, and an interactive Porsche data story built from officially published figures.">
   <meta name="twitter:image" content="https://sura-aliyeva.github.io/assets/og-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,13 +56,13 @@
           <span>✦ Open to Data Analyst opportunities</span>
         </div>
       </div>
-      <div class="hero-card">
+      <div class="hero-card methane-card">
         <div class="card-top"><span>FEATURED</span><span>01</span></div>
         <div class="grid-mark"></div>
         <p class="mini-label">POWER BI · SQL · PYTHON</p>
-        <h2>Maven<br>Fuzzy Factory</h2>
-        <p>End-to-end e-commerce analytics project with 8 report pages and 142 visuals.</p>
-        <a href="#maven">Explore project →</a>
+        <h2>Methane<br>Intelligence</h2>
+        <p>31,916 satellite observations across 101 countries, with a closer look at methane sources in Azerbaijan’s oil and gas sector.</p>
+        <a href="#methane">Explore project →</a>
       </div>
     </section>
 
@@ -73,6 +73,70 @@
           <h2>Projects that show<br><span>how I think with data.</span></h2>
         </div>
       </div>
+
+      <article id="methane" class="project featured-project methane" aria-labelledby="methane-title">
+        <div class="project-copy methane-intro">
+          <p class="project-tag">FEATURED · ENVIRONMENTAL ANALYTICS</p>
+          <h3 id="methane-title">Methane Intelligence <span>— Global &amp; Azerbaijan Emissions Monitoring</span></h3>
+          <p>Which methane detections can we trace to a source, and which sources warrant a closer look? I used satellite observations from UNEP’s International Methane Emissions Observatory (IMEO) to study global coverage, then examined source identification, emission rates and repeat detections in Azerbaijan’s oil and gas sector.</p>
+          <div class="project-links">
+            <a href="https://methanedata.unep.org/methane-alert-response-system">Data source · Methane Alert and Response System (MARS)</a>
+          </div>
+          <p class="note">An independent environmental analytics project supporting measurement, reporting and verification (MRV) decisions. It is separate from official OGMP 2.0 reporting.</p>
+        </div>
+
+        <section class="methane-coverage" aria-labelledby="methane-coverage-title">
+          <h4 id="methane-coverage-title" class="eyebrow">Global coverage</h4>
+          <dl class="methane-metrics">
+            <div class="methane-total"><dt>Methane observations</dt><dd>31,916</dd></div>
+            <div><dt>Emission sources</dt><dd>4,369</dd></div>
+            <div><dt>Countries</dt><dd>101</dd></div>
+            <div><dt>Satellite systems</dt><dd>10</dd></div>
+          </dl>
+        </section>
+
+        <div class="methane-findings">
+          <section aria-labelledby="methane-az-title">
+            <h4 id="methane-az-title">Azerbaijan’s oil and gas sources</h4>
+            <p>Across 155 observations, the analysis identified 42 sources. It flagged 1 high-priority source and 2 persistent sources for follow-up.</p>
+            <dl class="methane-flux">
+              <div><dt>Median flux</dt><dd>2,706 <small>kg/h</small></dd></div>
+              <div><dt>Maximum observed flux</dt><dd>119,000 <small>kg/h</small></dd></div>
+            </dl>
+          </section>
+          <section aria-labelledby="methane-check-title">
+            <h4 id="methane-check-title">Why the Power BI count fell short</h4>
+            <p>In Power BI, the source filter context excluded <strong>10 unassigned observations</strong>, leaving 145 visible. I counted all Azerbaijan oil and gas observations in SQL, then grouped them by source assignment. The two groups reconcile to 155.</p>
+            <p class="methane-rate"><strong>93.55%</strong> of observations had an identified source (145 of 155).</p>
+          </section>
+        </div>
+
+        <details class="methane-details">
+          <summary>Technical architecture, methodology &amp; report pages</summary>
+          <div class="methane-method">
+            <section aria-labelledby="methane-method-title">
+              <h4 id="methane-method-title">From observation to report</h4>
+              <ol>
+                <li><strong>Prepare and explore.</strong> Python, Pandas and NumPy support ETL and exploratory data analysis of MARS observations, source assignments and measured flux.</li>
+                <li><strong>Model and validate.</strong> The project uses 11 PostgreSQL tables. SQL checks distinguish observation counts from distinct sources and keep unassigned detections in the denominator.</li>
+                <li><strong>Analyze and report.</strong> Statistical analysis summarizes emission rates and source persistence. Power BI and DAX present the findings across four report pages.</li>
+              </ol>
+            </section>
+            <section aria-labelledby="methane-pages-title">
+              <h4 id="methane-pages-title">4 Power BI report pages</h4>
+              <ol>
+                <li>Global Methane Overview</li>
+                <li>Azerbaijan Methane Intelligence</li>
+                <li>Measurement &amp; Data Quality</li>
+                <li>Alert &amp; Response</li>
+              </ol>
+            </section>
+          </div>
+        </details>
+        <div class="chips methane-tools" role="group" aria-label="Technologies and methods">
+          <span>Python</span><span>Pandas</span><span>NumPy</span><span>PostgreSQL</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>EDA</span><span>ETL</span><span>Statistical analysis</span><span>Data validation</span>
+        </div>
+      </article>
 
       <article id="maven" class="project featured-project">
         <figure class="shot shot-hero">
