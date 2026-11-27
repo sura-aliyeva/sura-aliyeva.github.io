@@ -233,8 +233,105 @@ footer{max-width:var(--max);margin:auto;padding:25px 28px 35px;border-top:1px so
 .methane-tools {
   margin-top: -12px;
 }
+.methane-gallery {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.methane-gallery h4 {
+  margin-bottom: 18px;
+  font-size: 19px;
+  letter-spacing: -.5px;
+}
+.methane-gallery-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px 40px;
+  margin-bottom: 28px;
+}
+.methane-export-notes {
+  border-left: 2px solid var(--accent);
+  padding-left: 18px;
+}
+.methane-export-notes h5 {
+  font-size: 15px;
+}
+.methane-export-notes p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.methane-gallery .shot figcaption small, .lb-export-note {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.lightbox[data-gallery="methane"] figure {
+  align-items: center;
+  min-height: 0;
+}
+.lightbox[data-gallery="methane"] img {
+  min-height: 0;
+  background: transparent;
+  border: 0;
+}
+.lightbox[data-gallery="methane"] figcaption {
+  flex: none;
+  max-width: 85ch;
+}
 @media (max-width: 800px) {
-  .methane, .methane-findings, .methane-method {
+  .methane, .methane-findings, .methane-method, .methane-gallery-lead {
     grid-template-columns: minmax(0, 1fr);
   }
+  .lightbox[data-gallery="methane"] {
+    padding: 54px 14px 16px;
+  }
+  .lightbox[data-gallery="methane"] .lb-btn {
+    min-width: 44px;
+    min-height: 44px;
+    top: 4px;
+    transform: none;
+    background: var(--panel);
+  }
+  .lightbox[data-gallery="methane"] .lb-prev {left: 14px;}
+  .lightbox[data-gallery="methane"] .lb-next {left: 66px; right: auto;}
+  .lightbox[data-gallery="methane"] .lb-close {right: 14px;}
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .lightbox[data-gallery="methane"] {
+    padding: 8px;
+  }
+  .lightbox[data-gallery="methane"] figure {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+  .lightbox[data-gallery="methane"] img {
+    width: 100%;
+    max-height: 100%;
+  }
+  .lightbox[data-gallery="methane"] figcaption {
+    align-self: end;
+    height: calc(100% - 54px);
+    overflow: auto;
+    text-align: left;
+  }
+  .lightbox[data-gallery="methane"] .lb-btn {
+    top: 4px;
+    left: auto;
+    min-width: 44px;
+    min-height: 44px;
+    transform: none;
+    background: var(--panel);
+  }
+  .lightbox[data-gallery="methane"] .lb-prev {right: 108px;}
+  .lightbox[data-gallery="methane"] .lb-next {right: 58px;}
+  .lightbox[data-gallery="methane"] .lb-close {right: 8px;}
 }

@@ -95,6 +95,57 @@
           </dl>
         </section>
 
+        <section class="methane-gallery" aria-labelledby="methane-gallery-title">
+          <h4 id="methane-gallery-title">Power BI report gallery</h4>
+          <div class="methane-gallery-lead">
+            <figure class="shot shot-hero">
+              <button type="button" class="shot-open" data-preview data-gallery="methane" data-src="assets/methane/03-measurement-data-quality.png" data-cap="03 — Measurement &amp; Data Quality">
+                <img src="assets/methane/03-600.webp" srcset="assets/methane/03-600.webp 600w, assets/methane/03-1200.webp 1200w"
+                     sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1180px) 58vw, 660px"
+                     width="1200" height="688" loading="lazy" alt="Measurement &amp; Data Quality report showing the uncertainty distribution, flux versus uncertainty, data gaps by sector, and median uncertainty by satellite.">
+              </button>
+              <figcaption><span>03</span> Measurement &amp; Data Quality · Main preview</figcaption>
+            </figure>
+            <div class="methane-export-notes">
+              <h5>Reading the preliminary exports</h5>
+              <p id="methane-map-note">The Azure Maps panels on pages 01 and 02 show a sign-in prompt because the maps did not render during export.</p>
+              <p id="methane-source-note">Page 02 shows 155 observations, but its source filter leaves the global counts of 314 high-priority and 160 persistent sources in view. SQL confirms 1 high-priority source and 2 persistent sources in Azerbaijan.</p>
+              <p id="methane-register-note">The action register on page 04 has no visible rows in this export.</p>
+            </div>
+          </div>
+          <p class="strip-label">Select a report page to view it full size</p>
+          <div class="shot-grid">
+            <figure class="shot">
+              <button type="button" class="shot-open" data-gallery="methane" data-src="assets/methane/01-global-overview.png" data-cap="01 — Global Methane Overview · Preliminary report export" aria-describedby="methane-map-note">
+                <img src="assets/methane/01-600.webp" srcset="assets/methane/01-300.webp 300w, assets/methane/01-600.webp 600w" sizes="(max-width: 800px) 48vw, (max-width: 1000px) 32vw, 272px"
+                     width="600" height="344" loading="lazy" alt="Global methane indicators, observations by satellite and sector, and the annual trend alongside the Azure Maps sign-in panel.">
+              </button>
+              <figcaption><span>01</span> Global Methane Overview<small>Preliminary report export</small></figcaption>
+            </figure>
+            <figure class="shot">
+              <button type="button" class="shot-open" data-gallery="methane" data-src="assets/methane/02-azerbaijan-intelligence.png" data-cap="02 — Azerbaijan Methane Intelligence · Preliminary report export" aria-describedby="methane-map-note methane-source-note">
+                <img src="assets/methane/02-600.webp" srcset="assets/methane/02-300.webp 300w, assets/methane/02-600.webp 600w" sizes="(max-width: 800px) 48vw, (max-width: 1000px) 32vw, 272px"
+                     width="600" height="344" loading="lazy" alt="Azerbaijan observation totals and flux, a source ranking, a mixed-country monitoring table, and an Azure Maps sign-in panel.">
+              </button>
+              <figcaption><span>02</span> Azerbaijan Methane Intelligence<small>Preliminary report export</small></figcaption>
+            </figure>
+            <figure class="shot">
+              <button type="button" class="shot-open" data-gallery="methane" data-src="assets/methane/03-measurement-data-quality.png" data-cap="03 — Measurement &amp; Data Quality">
+                <img src="assets/methane/03-600.webp" srcset="assets/methane/03-300.webp 300w, assets/methane/03-600.webp 600w" sizes="(max-width: 800px) 48vw, (max-width: 1000px) 32vw, 272px"
+                     width="600" height="344" loading="lazy" alt="Measurement &amp; Data Quality report with an uncertainty histogram, a flux scatterplot, and comparisons by sector and satellite.">
+              </button>
+              <figcaption><span>03</span> Measurement &amp; Data Quality</figcaption>
+            </figure>
+            <figure class="shot">
+              <button type="button" class="shot-open" data-gallery="methane" data-src="assets/methane/04-alert-response.png" data-cap="04 — Alert &amp; Response · Preliminary report export" aria-describedby="methane-register-note">
+                <img src="assets/methane/04-600.webp" srcset="assets/methane/04-300.webp 300w, assets/methane/04-600.webp 600w" sizes="(max-width: 800px) 48vw, (max-width: 1000px) 32vw, 272px"
+                     width="600" height="344" loading="lazy" alt="Global notification and response indicators, notification status and feedback charts, and an empty action-register panel.">
+              </button>
+              <figcaption><span>04</span> Alert &amp; Response<small>Preliminary report export</small></figcaption>
+            </figure>
+          </div>
+        </section>
+
         <div class="methane-findings">
           <section aria-labelledby="methane-az-title">
             <h4 id="methane-az-title">Azerbaijan’s oil and gas sources</h4>
@@ -421,7 +472,7 @@
     <button type="button" class="lb-btn lb-next" aria-label="Next page">›</button>
     <figure>
       <img id="lb-img" src="" alt="">
-      <figcaption id="lb-cap"></figcaption>
+      <figcaption id="lb-cap" aria-live="polite" aria-atomic="true"></figcaption>
     </figure>
   </div>
 
