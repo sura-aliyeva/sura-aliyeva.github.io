@@ -11,12 +11,17 @@ document.querySelectorAll('.nav nav a').forEach(a => a.addEventListener('click',
    view. Within a gallery a source that appears twice — a hero shot repeated
    in the strip below it — is one entry, not two. */
 const box = document.getElementById('lightbox');
-const shots = [...document.querySelectorAll('.shot-open')];
+// Register the report pages before any alternate preview of a later page.
+const shots = [
+  ...document.querySelectorAll('.shot-open:not([data-preview])'),
+  ...document.querySelectorAll('.shot-open[data-preview]')
+];
 
 if (shots.length && box) {
   const img = document.getElementById('lb-img');
   const cap = document.getElementById('lb-cap');
   const closeBtn = box.querySelector('.lb-close');
+  const nextBtn = box.querySelector('.lb-next');
 
   const galleries = new Map();   // gallery name -> deduplicated button list
   const spot = new Map();        // button -> { list, index } it opens at
@@ -40,12 +45,22 @@ if (shots.length && box) {
     img.src = b.dataset.src;
     img.alt = b.querySelector('img').alt;
     cap.textContent = b.dataset.cap;
+    const noteIds = b.getAttribute('aria-describedby')?.split(/\s+/) || [];
+    for (const id of noteIds) {
+      const description = document.getElementById(id);
+      if (!description) continue;
+      const note = document.createElement('span');
+      note.className = 'lb-export-note';
+      note.textContent = description.textContent;
+      cap.append(note);
+    }
   };
 
   const open = btn => {
     const where = spot.get(btn);
     list = where.list;
-    lastFocus = document.activeElement;
+    box.dataset.gallery = btn.dataset.gallery;
+    lastFocus = btn;
     show(where.index);
     box.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -62,13 +77,21 @@ if (shots.length && box) {
   shots.forEach(b => b.addEventListener('click', () => open(b)));
   closeBtn.addEventListener('click', close);
   box.querySelector('.lb-prev').addEventListener('click', () => show(at - 1));
-  box.querySelector('.lb-next').addEventListener('click', () => show(at + 1));
+  nextBtn.addEventListener('click', () => show(at + 1));
 
   // clicking the backdrop closes; clicking the image itself does not
   box.addEventListener('click', e => { if (e.target === box) close(); });
 
   document.addEventListener('keydown', e => {
     if (box.hidden) return;
+    if (e.key === 'Tab') {
+      const first = e.shiftKey ? nextBtn : closeBtn;
+      const last = e.shiftKey ? closeBtn : nextBtn;
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
     if (e.key === 'Escape') close();
     if (e.key === 'ArrowLeft') show(at - 1);
     if (e.key === 'ArrowRight') show(at + 1);
